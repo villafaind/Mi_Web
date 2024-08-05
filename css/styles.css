@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /*Establece el margen externo del cuerpo (body) en 0*/
+    padding: 0; /*Establece el relleno interior del cuerpo en 0.*/
+    display: flex; /* Configura el cuerpo como un contenedor flexible, permitiendo el uso de propiedades flexibles en sus hijos.*/
+    flex-direction: column; /*Establece la dirección principal del contenedor flexible como columna, lo que significa que los elementos hijos se apilan verticalmente*/
+    background: #0c192c; /*Establece el color de fondo del cuerpo en un tono de azul oscuro (#0c192c). Ajusta este valor según tus preferencias de color.*/
+}
+
+.container {
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.fa-bars {
+    display: none;
+}
+
+.fa-solid {
+    display: none;
+    color: #0c192c;
+}
+
+.bubbles {
+    position: fixed; /* Cambia 'relative' por 'fixed' para que las burbujas se posicionen en relación con la ventana del navegador */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupar toda la anchura */
+    height: 100%; /* Ocupar toda la altura */
+    z-index: -1; /* Colocar las burbujas detrás del contenido */
+    display: flex;
+    justify-content: space-around; /* Distribuir las burbujas horizontalmente */
+    align-items: center; /* Centrar verticalmente las burbujas */
+    flex-wrap: wrap; /* Permitir que las burbujas se envuelvan en varias líneas si es necesario */
+}
+
+.bubbles span {
+    position: relative;
+    width: 20px; /* Reduce el tamaño de las burbujas */
+    height: 20px; /* Reduce el tamaño de las burbujas */
+    background: #4fc3dc;
+    margin: 0 2px; /* Reduce el espacio entre las burbujas */
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #4fc3dc44,
+                0 0 25px #4fc3dc,
+                0 0 50px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: yellow;
+    box-shadow: 0 0 0 5px rgb(211, 211, 67),
+                0 0 25px yellow,
+                0 0 50px yellow;
+}
+
+header {
+    background-color: #0c192c;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 450px;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: yellow;
+    float: right;
+    line-height: 50px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none; 
+}
+
+.nav-item .nav-link.home {
+    color: yellow !important;
+}
+
+.header-text {
+    color: blue !important;
+}
+
+img.icono-boca {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 105px; /* Ancho deseado */
+    height: 105px; /* Mantener la proporción original */
+}
+
+#seccion-principal {
+    min-height: 0;
+    margin: 0;
+    padding: 0 20px; /* Ajusta el valor según sea necesario */
+}
+
+#seccion-principal h2 {    
+    margin: 0; /* Asegura que no haya márgenes */    
+    text-align: center; /* Centra el texto */
+    
+}
+
+#seccion-principal p {
+    margin: 0;
+}
+
+.em {
+    color: grey;
+    padding: 0; /* Elimina el espacio interior */
+    margin: 0;
+}
+
+
+.em,
+em2,
+em3,
+em4,
+em5,
+em6,
+em7 {
+    color: white;
+}
+
+img.icono-boca-2 {    
+    width: 34px; /* Ancho deseado */
+    height: 40px; /* Mantener la proporción original */
+    display: block;
+    margin: 0 auto;
+}
+
+.seccion-2 {
+    color: white;
+    text-align: justify; /* Justifica el texto */
+}
+
+#miCarrusel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Define las columnas del grid */
+    gap: 10px; /* Espacio entre las columnas del grid */
+}
+
+#miCarrusel img {
+    width: 100%;
+    height: 378px;
+    border: 2px solid blue;
+    margin-left: 20px;
+}
+
+.mi-imagen {
+    width: 670px;
+    height: 375px;
+    border: 1px solid yellow;
+    margin-bottom: 20px;
+}
+
+
+.footer-text {
+    color: white !important;
+    text-align: left; /* Centra el texto del pie de página */
+    margin: 10px 0; /* Agrega espacio alrededor del pie de página */
+}
+
+/* Agrega estas reglas al final de tu archivo CSS */
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+#seccion-principal h2 em {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; /* Puedes ajustar este valor según sea necesario */    
+    background: #ccc;
+    background: linear-gradient(#0c198c, #0c192c); 
+    font-family: system-ui;
+    font-size: 2rem;
+    -webkit-text-fill-color: yellow;
+}
+
+#seccion-principal .seccion-1 .em2 {
+    margin-bottom: 20px; /* o el valor que desees */
+}
+
+/* Agrega estas reglas CSS en tu archivo styles.css */
+
+.seccion-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.div {
+    margin-top: 30px;   
+}
+
+.card {
+    width: 30%;
+    margin-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo gris con un tono blanco (ajusta según sea necesario) */
+    border: 1px solid white; /* Borde blanco */
+    color: white; /* Texto blanco */
+}
+
+.card img {
+    width: 100%;
+    height: 1000%; /* Ajusta la altura según tus preferencias */
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 10px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
+#seccion-principal h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; /* Puedes ajustar este valor según sea necesario */    
+    background: #ccc;
+    background: linear-gradient(#0c198c, #0c192c); 
+    font-family: system-ui;
+    font-size: 2rem;
+    -webkit-text-fill-color: yellow;
+}
+
+/* ESTILO PROYECTO 1 */
+
+.faind {
+    display: flex;
+    color: white;
+    width: 800px;
+    height: 375px;
+
+    margin-top: 35px;
+    margin-left: 400px;
+}
+
+.faind2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carrusel_faind {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); /* Define las columnas del grid */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px; /* Espacio entre las columnas del grid */
+}
+
+.carrusel_faind img {
+    width: 100%;
+    height: 378px;
+    border: 2px solid blue;
+    margin-left: 220px;
+}
+
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+    
+    #check:checked ~ .nav-pills {
+        display: block;  
+    }
+
+    .nav-pills {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        text-align: justify;
+        top: 120px;
+        left: 0px;
+        transition: all 0.5s;
+    }
+
+    .nav-pills li {
+        display: block;
+        align-items: center;
+    }
+
+    .nav-pills li a {
+        font-size: 20px;
+        align-items: center;
+    }
+
+    #check:checked ~ .checkbtn {
+        color: #2c3e50;        
+    }
+
+    /* Alinear el escudo y el título a la izquierda */
+    header a {
+        margin-right: -150px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Mover el icono de menú desplegable al lado derecho */
+    .fa-solid {
+        display: block;
+        color: yellow;
+        margin-left: -100px;
+        margin-top: 20px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    
+    img.icono-boca {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        width: 80px; /* Ancho deseado */
+        height: 80px; /* Mantener la proporción original */
+    }
+
+    #seccion-principal .em2 {
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }    
+
+    .row{
+        margin-top: 30px;
+    }
+
+    #seccion-principal .seccion-1 .em2 {
+        margin-bottom: 0; /* o el valor que desees */
+    }
+
+    .col-md-6 {
+        margin-bottom: 80px;
+      
+    }
+
+    .card {
+        width: 30%;    
+        margin-bottom: 50px; 
+        font-size: 10px;
+    }
+
+    .card-title {
+        font-size: small;
+    } 
+
+    .card img {
+        width: 100%;
+        height: 120px; /* Ajusta la altura según tus preferencias */
+        object-fit: cover;
+    }
+
+
+    .card-body {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #miCarrusel {
+        display: block; /* Cambia a bloque para que las imágenes se muestren una encima de la otra */
+        max-width: 100%; /* Asegura que el carrusel no exceda su contenedor */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        margin-top: 0; /* Elimina el margen superior */
+        margin-bottom: 0; /* Elimina el margen inferior */
+    }
+
+    #miCarrusel img {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Altura automática para mantener la proporción */
+        border: 2px solid blue; /* Borde de 2px sólido azul alrededor de cada imagen */
+        margin-left: 0; /* Elimina el margen a la izquierda */
+        margin-bottom: 10px; /* Agrega un margen inferior entre las imágenes */
+    }
+
+    .mi-imagen {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Altura automática para mantener la proporción */
+        margin: 0; /* Elimina cualquier margen */
+    }
+
+}
